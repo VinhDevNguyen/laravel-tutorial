@@ -63,3 +63,19 @@ $pizzas = [
     do
 @endfor
 ```
+2. For loop through list
+
+If we have a list like this one
+```php
+$pizzas = [
+    ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+    ['type' => 'volcano', 'base' => 'garlic crust'],
+    ['type' => 'veg supreme', 'base' => 'thin & crispy']
+];
+```
+We can do a for loop through list by using for loop:
+```php
+@for($i = 0; $i < count($pizzas); $i++)
+    <p> {{$pizzas[$i]['type']}} - {{$pizzas[$i]['base']}}</p>
+@endfor
+```

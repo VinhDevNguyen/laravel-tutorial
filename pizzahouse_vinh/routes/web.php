@@ -20,9 +20,9 @@ Route::get('/', function () {
 Route::get('/pizzas', function() {
     // We can create a variable to store data and return it
     $pizzas = [
-        'type' => 'Pizza Việt Nam',
-        'ingredients' => 'Cheese',
-        'price' => 40000
-    ];
-    return view('pizzas', $pizzas);
+        ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+        ['type' => 'volcano', 'base' => 'garlic crust'],
+        ['type' => 'veg supreme', 'base' => 'thin & crispy']
+      ];
+    return view('pizzas', ['pizzas' => $pizzas]);
 });

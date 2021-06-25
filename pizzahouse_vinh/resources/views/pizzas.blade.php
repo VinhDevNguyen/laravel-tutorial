@@ -69,11 +69,15 @@
             <div class="title m-b-md">
                 Pizzas
             </div>
-            <p> {{$type}} - {{$ingredients}} - {{$price}} </p>
             
             <!-- For loop syntax -->
-            @for($i = 0; $i < 5; $i++)
+            <!-- @for($i = 0; $i < 5; $i++)
                 <p>The value of i is {{$i}} </p>
+            @endfor -->
+
+            <!-- For loop through list -->
+            @for($i = 0; $i < count($pizzas); $i++)
+                <p> {{$pizzas[$i]['type']}} - {{$pizzas[$i]['base']}}</p>
             @endfor
         </div>
     </div>
