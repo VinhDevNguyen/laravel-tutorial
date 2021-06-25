@@ -22,7 +22,7 @@ Route::get('/pizzas', function() {
     $pizzas = [
         'type' => 'Pizza Việt Nam',
         'ingredients' => 'Bột, đường, muối, ...',
-        'price' => 80000
+        'price' => 40000
     ];
     return view('pizzas', $pizzas);
 });
