@@ -32,8 +32,7 @@ $pizzas = [
 ```
 ## Lesson 4:
 ### Blade basic
-#### If Statement
-Syntax `If Statement`
+1. Syntax `If Statement`
 ```php
 @if(<condition>)
     return
@@ -42,4 +41,10 @@ Syntax `If Statement`
 @else
     return
 @endif()
+```
+2. Syntax `unless`
+```php
+@unless(<condition>)
+    return
+@endunless()
 ```

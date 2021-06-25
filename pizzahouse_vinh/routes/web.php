@@ -21,7 +21,7 @@ Route::get('/pizzas', function() {
     // We can create a variable to store data and return it
     $pizzas = [
         'type' => 'Pizza Việt Nam',
-        'ingredients' => 'Bột, đường, muối, ...',
+        'ingredients' => 'Cheese',
         'price' => 40000
     ];
     return view('pizzas', $pizzas);

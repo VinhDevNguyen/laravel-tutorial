@@ -79,6 +79,11 @@
             @else
                 <p>This pizza is so cool</p>
             @endif
+
+            <!-- Unless -->
+            @unless($ingredients == 'garlic')
+                <p>This pizza doesn't have garlic</p>
+            @endunless
         </div>
     </div>
     </body>
