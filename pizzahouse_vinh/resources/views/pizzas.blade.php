@@ -69,7 +69,7 @@
             <div class="title m-b-md">
                 Pizzas
             </div>
-            <p> {{$type}} </p>
+            <p> {{$type}} - {{$ingredients}} - {{$price}} </p>
         </div>
     </div>
     </body>

@@ -22,3 +22,11 @@ Route::get('/pizzas', function() {
 // .\resources\views\pizzas.blade.php
 {{$type}}
 ```
+3. We can add multiple values and store it in variable then return it like this:
+```php
+$pizzas = [
+    'type' => 'Pizza Việt Nam',
+    'ingredients' => 'Bột, đường, muối, ...',
+    'price' => 80000
+];
+```
