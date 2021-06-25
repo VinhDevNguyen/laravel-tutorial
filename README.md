@@ -48,3 +48,9 @@ $pizzas = [
     return
 @endunless()
 ```
+3. Syntax `php` to write php code
+```php
+@php
+// write php code in here
+@endphp
+```

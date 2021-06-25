@@ -84,6 +84,12 @@
             @unless($ingredients == 'garlic')
                 <p>This pizza doesn't have garlic</p>
             @endunless
+
+            <!-- PHP code -->
+            @php
+                $name = 'Vinh';
+                echo $name;
+            @endphp
         </div>
     </div>
     </body>
