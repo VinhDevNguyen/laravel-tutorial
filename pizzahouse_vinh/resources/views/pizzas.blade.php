@@ -71,25 +71,10 @@
             </div>
             <p> {{$type}} - {{$ingredients}} - {{$price}} </p>
             
-            <!-- If statements -->
-            @if($price > 50000)
-                <p>This pizza is expensive</p>
-            @elseif($price < 30000)
-                <p>This pizza is cheap</p>
-            @else
-                <p>This pizza is so cool</p>
-            @endif
-
-            <!-- Unless -->
-            @unless($ingredients == 'garlic')
-                <p>This pizza doesn't have garlic</p>
-            @endunless
-
-            <!-- PHP code -->
-            @php
-                $name = 'Vinh';
-                echo $name;
-            @endphp
+            <!-- For loop syntax -->
+            @for($i = 0; $i < 5; $i++)
+                <p>The value of i is {{$i}} </p>
+            @endfor
         </div>
     </div>
     </body>

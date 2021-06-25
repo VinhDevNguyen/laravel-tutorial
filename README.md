@@ -54,3 +54,12 @@ $pizzas = [
 // write php code in here
 @endphp
 ```
+
+## Lesson 5:
+### Blade loops
+1. For loop syntax
+```php
+@for(<$temp = start>; <$temp condition>; <$temp++> )
+    do
+@endfor
+```
