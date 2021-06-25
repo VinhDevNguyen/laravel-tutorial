@@ -1,5 +1,5 @@
 # Laravel 
-## 1. Lesson 2:
+## Lesson 2:
 ### Installing Laravel
 1. Install XAMPP
 2. Install composer
@@ -8,7 +8,7 @@
 5. To create a new project we use `laravel new [project_name]`. Example: To create `pizzahouse` project we use `laravel new pizzahouse`
 6. `cd` into `pizzahouse` dir and then type `php artisan serve` to host localhose server.
 
-## 2.Lesson 3:
+## Lesson 3:
 ### Passing Data to Views
 1. We can pass the data to views using `['varibale' => ' ']` in `./routes/web.php`. Example below:
 ```php
@@ -29,4 +29,22 @@ $pizzas = [
     'ingredients' => 'Bột, đường, muối, ...',
     'price' => 80000
 ];
+```
+## Lesson 4:
+### Blade basic
+1. Syntax `If Statement`
+```php
+@if(<condition>)
+    return
+@elseif(<condition>)
+    return
+@else
+    return
+@endif()
+```
+2. Syntax `unless`
+```php
+@unless(<condition>)
+    return
+@endunless()
 ```

@@ -70,6 +70,20 @@
                 Pizzas
             </div>
             <p> {{$type}} - {{$ingredients}} - {{$price}} </p>
+            
+            <!-- If statements -->
+            @if($price > 50000)
+                <p>This pizza is expensive</p>
+            @elseif($price < 30000)
+                <p>This pizza is cheap</p>
+            @else
+                <p>This pizza is so cool</p>
+            @endif
+
+            <!-- Unless -->
+            @unless($ingredients == 'garlic')
+                <p>This pizza doesn't have garlic</p>
+            @endunless
         </div>
     </div>
     </body>
