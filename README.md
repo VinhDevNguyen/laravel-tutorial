@@ -88,10 +88,13 @@ The layout file is a template file so that we can re-use it (header, footer, js-
 3. We can re-write header, script, footer, ... in layout file, then add `@yield('section-name)` to use the from views folder
 
 ## Lesson 7: CSS & Images
-### CSS
 1. To re-use css style file, we can create `css` folder in `public` folder and then create a css file.
 2. In view file, we add this code below in head tag to use css
 ```html
-    <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 ```
-**Note:**  We don't need to write `href="/public/css/main.css"` because everything in public folder is the root so that every view page can access that.
+3. We can create a new `img` folder in `public` folder to store image that we use in the website, and then use this code bellow to use the img
+```html
+<img src="/img/pizza-house.png" alt="pizza-house-logo">
+```
+**Note:**  We don't need to write `href="/public/css/main.css"` because everything in public folder is in the root level so that every view page can access that.

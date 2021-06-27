@@ -32,7 +32,11 @@ html, body {
 }
 
 .title {
-    font-size: 84px;
+    font-size: 50px;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    padding: 12px 0;
+    color: #5e2195;
 }
 
 .links > a {
