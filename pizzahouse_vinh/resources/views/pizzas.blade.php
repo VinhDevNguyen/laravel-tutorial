@@ -6,7 +6,7 @@
         <div class="title m-b-md">
             Pizzas
         </div>
-        
+        <p> {{$name}} </p>
         <!-- For loop syntax -->
         <!-- @for($i = 0; $i < 5; $i++)
             <p>The value of i is {{$i}} </p>

@@ -98,3 +98,13 @@ The layout file is a template file so that we can re-use it (header, footer, js-
 <img src="/img/pizza-house.png" alt="pizza-house-logo">
 ```
 **Note:**  We don't need to write `href="/public/css/main.css"` because everything in public folder is in the root level so that every view page can access that.
+
+## Lesson 8: Query Parameters
+We can pass data through parameters in the URL like this one bellow
+```
+http://localhost:8000/?name=vinh
+```
+In the `web.php` file, we have to use `request()` function to recive the data. Example below:
+```php
+$name = request('name');
+```
