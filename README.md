@@ -1,6 +1,5 @@
 # Laravel 
-## Lesson 2:
-### Installing Laravel
+## Lesson 2: Installing Laravel
 1. Install XAMPP
 2. Install composer
 3. Open terminal and type `composer -V` to check composer version
@@ -8,8 +7,7 @@
 5. To create a new project we use `laravel new [project_name]`. Example: To create `pizzahouse` project we use `laravel new pizzahouse`
 6. `cd` into `pizzahouse` dir and then type `php artisan serve` to host localhose server.
 
-## Lesson 3:
-### Passing Data to Views
+## Lesson 3: Passing Data to Views
 1. We can pass the data to views using `['varibale' => ' ']` in `./routes/web.php`. Example below:
 ```php
 // .\routes\web.php
@@ -30,9 +28,8 @@ $pizzas = [
     'price' => 80000
 ];
 ```
-## Lesson 4:
-### Blade basic
-1. Syntax `If Statement`
+## Lesson 4: Blade basic
+### 1. Syntax `If Statement`
 ```php
 @if(<condition>)
     return
@@ -42,28 +39,27 @@ $pizzas = [
     return
 @endif()
 ```
-2. Syntax `unless`
+### 2. Syntax `unless`
 ```php
 @unless(<condition>)
     return
 @endunless()
 ```
-3. Syntax `php` to write php code
+### 3. Syntax `php` to write php code
 ```php
 @php
 // write php code in here
 @endphp
 ```
 
-## Lesson 5:
-### Blade loops
-1. For loop syntax
+## Lesson 5: Blade loops
+### 1. For loop syntax
 ```php
 @for(<$temp = start>; <$temp condition>; <$temp++> )
     do
 @endfor
 ```
-2. For loop through list
+### 2. For loop through list
 
 If we have a list like this one
 ```php
@@ -79,8 +75,7 @@ We can do a for loop through list by using for loop:
     <p> {{$pizzas[$i]['type']}} - {{$pizzas[$i]['base']}}</p>
 @endfor
 ```
-## Lesson 6:
-### Layout files
+## Lesson 6: Layout files
 The layout file is a template file so that we can re-use it (header, footer, js-scirpt, ...) for another view page. So how to use that?
 
 1. Create a new folder call `layouts` in `resources/views/` and then we create `layout.blade.php` file in `layouts` folder.
@@ -91,3 +86,12 @@ The layout file is a template file so that we can re-use it (header, footer, js-
 @endsection()
 ```
 3. We can re-write header, script, footer, ... in layout file, then add `@yield('section-name)` to use the from views folder
+
+## Lesson 7: CSS & Images
+### CSS
+1. To re-use css style file, we can create `css` folder in `public` folder and then create a css file.
+2. In view file, we add this code below in head tag to use css
+```html
+    <link rel="stylesheet" href="/css/main.css">
+```
+**Note:**  We don't need to write `href="/public/css/main.css"` because everything in public folder is the root so that every view page can access that.
