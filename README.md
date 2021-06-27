@@ -79,3 +79,15 @@ We can do a for loop through list by using for loop:
     <p> {{$pizzas[$i]['type']}} - {{$pizzas[$i]['base']}}</p>
 @endfor
 ```
+## Lesson 6:
+### Layout files
+The layout file is a template file so that we can re-use it (header, footer, js-scirpt, ...) for another view page. So how to use that?
+
+1. Create a new folder call `layouts` in `resources/views/` and then we create `layout.blade.php` file in `layouts` folder.
+2. In `welcome.blade.php` use `@extends('dir/to/layout/file')` and then use the code below to create a section
+```php
+@section('section-name')
+    //write content here!
+@endsection()
+```
+3. We can re-write header, script, footer, ... in layout file, then add `@yield('section-name)` to use the from views folder
