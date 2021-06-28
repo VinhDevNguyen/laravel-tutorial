@@ -17,7 +17,8 @@ class PizzaController extends Controller
         
         // We will use Models to get data from database
         // $pizzas = Pizza::all();
-        $pizzas = Pizza::orderBy('name', 'asc') -> get();
+        // $pizzas = Pizza::orderBy('name', 'asc') -> get();
+        $pizzas = Pizza::where('type', 'hawai ') -> get();
 
         // $name = request('name');
         // $age = request('age');

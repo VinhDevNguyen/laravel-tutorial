@@ -213,3 +213,7 @@ If you want to orderby ascending, using `asc`. Else, using `desc`
 ```php
 $pizzas = Pizza::orderBy('column', 'desc/asc') -> get();
 ```
+### Using where
+```php
+$pizzas = Pizza::where('column', 'value') -> get();
+```
