@@ -160,3 +160,51 @@ MariaDB [(none)]> create database pizzahouse;
 ```
 ### Set database in environment
 Go to `.env` file and replace `DB_DATABASE=` match with database name.
+
+## Lesson 12: Migration Basics (Work with MySQL database)
+### Create migration file
+Go to terminal and then type the code bellow:
+```
+php artisan make:migration create_pizzas_table
+```
+### Create a column in migration file
+We can create some column by add more `$table->type('name')` in `public function up`
+### Execute migration file 
+Go to terminal and enter this code
+```
+php artisan migrate
+```
+
+## Lesson 13: More on migration
+If we want to check migrate status, just using
+```
+php artisan migrate:status
+```
+If we want to rollback the last migration
+```
+php artisan migrate:rollback
+```
+**Note:** If you have excute migrate file and you want to add more column in that table, **DO NOT** add more column in old migrate file. Create new migrate file using
+```
+php artisan make:migration add_column_to_old_table
+```
+Then add new column and then run migrate bellow code again
+```
+php artisan migrate
+```
+
+## Lesson 14: Eloquent Models
+Using Eloquent models to access database
+### Create a model
+```
+php artisan make:model Pizza
+```
+### Declare Pizza model
+Go ahead into `PizzaController.php` file, then declare the Pizza model using this code below:
+```php
+use App\Models\Pizza;
+```
+### Get all data from database
+```php
+$pizzas = Pizza::all();
+```

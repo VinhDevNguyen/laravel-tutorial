@@ -3,16 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pizza;
 
 class PizzaController extends Controller
 {
     public function index(){
         // We can create a variable to store data and return it
-        $pizzas = [
-            ['type' => 'hawaiian', 'base' => 'cheesy crust'],
-            ['type' => 'volcano', 'base' => 'garlic crust'],
-            ['type' => 'veg supreme', 'base' => 'thin & crispy']
-        ];
+        // $pizzas = [
+        //     ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+        //     ['type' => 'volcano', 'base' => 'garlic crust'],
+        //     ['type' => 'veg supreme', 'base' => 'thin & crispy']
+        // ];
+        
+        // We will use Models to get data from database
+        $pizzas = Pizza::all();
 
         // $name = request('name');
         // $age = request('age');

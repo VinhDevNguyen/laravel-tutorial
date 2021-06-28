@@ -14,9 +14,14 @@
         @endfor -->
 
         <!-- For loop through list -->
-        @for($i = 0; $i < count($pizzas); $i++)
-            <p> {{$pizzas[$i]['type']}} - {{$pizzas[$i]['base']}}</p>
-        @endfor
+        <!-- @for($i = 0; $i < count($pizzas); $i++)
+            <p> {{$pizzas[$i]['type']}} - {{$pizzas[$i]['base']}} - {{$pizzas[$i]['name']}} </p>
+        @endfor -->
+
+        <!-- For each loop -->
+        @foreach($pizzas as $pizza)
+            <p> {{$pizza -> type}} - {{$pizza -> base}} - {{$pizza -> name}} </p>
+        @endforeach
     </div>
 </div>
 @endsection()
