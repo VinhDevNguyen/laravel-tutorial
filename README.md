@@ -217,3 +217,7 @@ $pizzas = Pizza::orderBy('column', 'desc/asc') -> get();
 ```php
 $pizzas = Pizza::where('column', 'value') -> get();
 ```
+
+## Lesson 15: MVC Naming Convention
+We should following the naming convention table below
+![image](https://user-images.githubusercontent.com/48788781/123611806-2cfef880-d82c-11eb-9ddf-76fa2a8485d9.png)

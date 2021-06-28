@@ -24,17 +24,21 @@ class PizzaController extends Controller
         // $age = request('age');
         // We don't need to create new variable, we can pass direct into return function
 
-        return view('pizzas', [
+        return view('pizzas.index', [
             'pizzas' => $pizzas,
             'name' => request('name'),
             'age' => request('age')
         ]);
     }
 
-    public function details($id){
+    public function show($id){
         //Use the $id variable to query the db for the record
-        return view('info', [
+        return view('pizzas.show', [
             'id' => $id
         ]);
+    }
+
+    public function create(){
+        return view('pizzas.create');
     }
 }
