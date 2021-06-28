@@ -208,3 +208,8 @@ use App\Models\Pizza;
 ```php
 $pizzas = Pizza::all();
 ```
+### Using order by
+If you want to orderby ascending, using `asc`. Else, using `desc`
+```php
+$pizzas = Pizza::orderBy('column', 'desc/asc') -> get();
+```
