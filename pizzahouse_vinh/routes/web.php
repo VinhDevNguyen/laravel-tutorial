@@ -35,3 +35,10 @@ Route::get('/pizzas', function() {
         'age' => request('age')
     ]);
 });
+
+Route::get('/pizzas/{id}', function($id) {
+    //Use the $id variable to query the db for the record
+    return view('info', [
+        'id' => $id
+    ]);
+});

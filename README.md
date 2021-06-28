@@ -116,3 +116,19 @@ return view('pizzas', [
     'age' => request('age')
 ]);
 ```
+
+## Lesson 9: Route Parameters (Wildcard)
+There is another way to get the data through parameters in URL like this one bellow
+```
+http://localhost:8000/pizzas/1
+```
+So how can we do that? We can use the code below
+```php
+Route::get('/pizzas/{id}', function($id) {
+    //Use the $id variable to query the db for the record
+    return view('info', [
+        'id' => $id
+    ]);
+});
+```
+Then we create a new views blade file call `info.blade.php`
