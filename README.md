@@ -132,3 +132,21 @@ Route::get('/pizzas/{id}', function($id) {
 });
 ```
 Then we create a new views blade file call `info.blade.php`
+
+## Lesson 10: Controllers
+Insted of create too much `Route` with a lot of code inside that, we can create a controller to manage a group of function and then we can call that function inside `Route`. So how to create a controller?
+
+1. To create controller (In this case we will create a new controller called `PizzaController`), we have to type this code bellow into a terminal
+```
+php artisan make:controller PizzaController
+```
+Then, a new controller file will be create in directory `/app/Http/Controllers`
+
+2. To call function from Controller, we have to referring to the Controller by using this code bellow
+```php
+use App\Http\Controllers\PizzaController;
+```
+Then we can call function
+```php
+Route::get('/pizzas', [PizzaController::class, 'function_name']);
+```
