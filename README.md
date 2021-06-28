@@ -150,3 +150,13 @@ Then we can call function
 ```php
 Route::get('/pizzas', [PizzaController::class, 'function_name']);
 ```
+
+## Lesson 11: Connecting to MySQL
+### Create database
+Go to terminal and type these code below to create new database
+```
+mysql -u root
+MariaDB [(none)]> create database pizzahouse;
+```
+### Set database in environment
+Go to `.env` file and replace `DB_DATABASE=` match with database name.
