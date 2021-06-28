@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PizzaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,28 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizzas', function() {
-    // We can create a variable to store data and return it
-    $pizzas = [
-        ['type' => 'hawaiian', 'base' => 'cheesy crust'],
-        ['type' => 'volcano', 'base' => 'garlic crust'],
-        ['type' => 'veg supreme', 'base' => 'thin & crispy']
-    ];
+Route::get('/pizzas', [PizzaController::class, 'index']);
 
-    // $name = request('name');
-    // $age = request('age');
-    // We don't need to create new variable, we can pass direct into return function
-
-    return view('pizzas', [
-        'pizzas' => $pizzas,
-        'name' => request('name'),
-        'age' => request('age')
-    ]);
-});
-
-Route::get('/pizzas/{id}', function($id) {
-    //Use the $id variable to query the db for the record
-    return view('info', [
-        'id' => $id
-    ]);
-});
+Route::get('/pizzas/{id}', [PizzaController::class, 'details']);
