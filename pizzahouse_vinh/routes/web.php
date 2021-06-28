@@ -24,10 +24,14 @@ Route::get('/pizzas', function() {
         ['type' => 'volcano', 'base' => 'garlic crust'],
         ['type' => 'veg supreme', 'base' => 'thin & crispy']
     ];
-    
-    $name = request('name');
+
+    // $name = request('name');
+    // $age = request('age');
+    // We don't need to create new variable, we can pass direct into return function
+
     return view('pizzas', [
         'pizzas' => $pizzas,
-        'name' => $name
+        'name' => request('name'),
+        'age' => request('age')
     ]);
 });

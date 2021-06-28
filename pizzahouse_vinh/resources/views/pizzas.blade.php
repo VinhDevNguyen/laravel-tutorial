@@ -7,6 +7,7 @@
             Pizzas
         </div>
         <p> {{$name}} </p>
+        <p> {{$age}} </p>
         <!-- For loop syntax -->
         <!-- @for($i = 0; $i < 5; $i++)
             <p>The value of i is {{$i}} </p>

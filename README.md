@@ -108,3 +108,11 @@ In the `web.php` file, we have to use `request()` function to recive the data. E
 ```php
 $name = request('name');
 ```
+Then we pass `$name` variable into `return()` function, or we can pass `request()` function direct into `return()` like this one below:
+```php
+return view('pizzas', [
+    'pizzas' => $pizzas,
+    'name' => request('name'),
+    'age' => request('age')
+]);
+```
