@@ -21,6 +21,7 @@
         <div class="title m-b-md">
             The best Pizza
         </div>
+        <a href="/pizzas/create/">Click here to order pizza!</a>
     </div>
 </div>
 @endsection()

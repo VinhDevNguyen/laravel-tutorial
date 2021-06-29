@@ -20,7 +20,8 @@
 
         <!-- For each loop -->
         @foreach($pizzas as $pizza)
-            <p> {{$pizza -> type}} - {{$pizza -> base}} - {{$pizza -> name}} </p>
+            <a href="/pizzas/{{$pizza -> id}}">{{$pizza -> type}} - {{$pizza -> base}} - {{$pizza -> name}}</a>
+            <br>
         @endforeach
     </div>
 </div>
