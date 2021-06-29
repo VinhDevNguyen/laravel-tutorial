@@ -18,8 +18,8 @@ class PizzaController extends Controller
         // We will use Models to get data from database
         // $pizzas = Pizza::all();
         // $pizzas = Pizza::orderBy('name', 'asc') -> get();
-        $pizzas = Pizza::where('type', 'hawai ') -> get();
-
+        // $pizzas = Pizza::where('type', 'hawai ') -> get();
+        $pizzas = Pizza::latest() -> get();
         // $name = request('name');
         // $age = request('age');
         // We don't need to create new variable, we can pass direct into return function

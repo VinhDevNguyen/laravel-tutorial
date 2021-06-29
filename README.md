@@ -5,7 +5,7 @@
 3. Open terminal and type `composer -V` to check composer version
 4. Type `composer global require laravel/installer` in terminal to install laravel
 5. To create a new project we use `laravel new [project_name]`. Example: To create `pizzahouse` project we use `laravel new pizzahouse`
-6. `cd` into `pizzahouse` dir and then type `php artisan serve` to host localhose server.
+6. `cd` into `pizzahouse` dir and then type `php artisan serve` to host localhost server.
 
 ## Lesson 3: Passing Data to Views
 1. We can pass the data to views using `['varibale' => ' ']` in `./routes/web.php`. Example below:
@@ -216,6 +216,11 @@ $pizzas = Pizza::orderBy('column', 'desc/asc') -> get();
 ### Using where
 ```php
 $pizzas = Pizza::where('column', 'value') -> get();
+```
+### Using latest
+To get the latest value
+```php
+$pizzas = Pizza::latest() -> get();
 ```
 
 ## Lesson 15: MVC Naming Convention

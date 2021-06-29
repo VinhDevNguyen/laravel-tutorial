@@ -1,11 +1,7 @@
 @extends('layouts/layout')
 
 @section('content')
-<div class="flex-center position-ref full-height">
-    <div class="content">
-        <div class="title m-b-md">
-            Pizzas list - {{$id}}
-        </div>
-    </div>
+<div class= "wrapper pizza-details">
+    <p>Order for {{$pizza}} </p>
 </div>
 @endsection()
