@@ -226,3 +226,30 @@ $pizzas = Pizza::latest() -> get();
 ## Lesson 15: MVC Naming Convention
 We should following the naming convention table below
 ![image](https://user-images.githubusercontent.com/48788781/123611806-2cfef880-d82c-11eb-9ddf-76fa2a8485d9.png)
+
+## Lession 17: Saving Records
+To save the records, we will have create a new object
+```php
+$pizzas = new Pizza();
+```
+Then recive data from request web form
+```php
+$pizzas -> name = request('name');
+```
+Finally, we save it into data base
+```php
+$pizzas -> save();
+```
+So we can redirect to homepage using
+```php
+return redirect('/')
+```
+### How we can redirect to homepage with new message like "Thanks for your order"?
+In controller file, we can return file like this
+```php
+return redirect('/') -> with('mssg', 'Thanks for your order!');
+```
+Then in view file, we can write this code bellow. It will show message while redirect
+```php
+{{session('mssg')}}
+```
