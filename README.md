@@ -227,7 +227,7 @@ $pizzas = Pizza::latest() -> get();
 We should following the naming convention table below
 ![image](https://user-images.githubusercontent.com/48788781/123611806-2cfef880-d82c-11eb-9ddf-76fa2a8485d9.png)
 
-## Lession 17: Saving Records
+## Lesson 20: Saving Records
 To save the records, we will have create a new object
 ```php
 $pizzas = new Pizza();
@@ -252,4 +252,11 @@ return redirect('/') -> with('mssg', 'Thanks for your order!');
 Then in view file, we can write this code bellow. It will show message while redirect
 ```php
 {{session('mssg')}}
+```
+
+## Lesson 21: Arrays & Json
+### Arrays
+How to get array from a web form, we have to create a checkbox and then in name field, we have to pass it as array like this code bellow:
+```php
+<input type="checkbox" name="toppings[]" value="mushrooms">Mushrooms<br />
 ```
