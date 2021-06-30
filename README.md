@@ -280,3 +280,21 @@ public function destroy($id){
     return redirect('/pizzas');
 }
 ```
+
+## Lesson 23: Using SASS
+### Install dependencies using npm
+```
+npm install
+```
+In `webpack.mix.js` file, we have to add sass path like this
+```js
+mix.js('resources/js/app.js', 'public/js')
+    .postCss('resources/css/app.css', 'public/css', [
+        //
+    ])
+    .sass('resources/sass/main.scss', 'public/css');
+```
+Then create a new folder call `sass` in `resources` folder, then create a new file call `main.scss`. After writing some css code in that file, then we run this command in terminal
+```
+npm run dev
+```
