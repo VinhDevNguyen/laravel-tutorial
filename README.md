@@ -298,3 +298,6 @@ Then create a new folder call `sass` in `resources` folder, then create a new fi
 ```
 npm run dev
 ```
+
+## Lesson 26: Protecting Route
+Add `-> middleware('auth')` to the route that we need to hide and force user login
