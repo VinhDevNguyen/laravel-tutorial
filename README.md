@@ -260,3 +260,10 @@ How to get array from a web form, we have to create a checkbox and then in name 
 ```php
 <input type="checkbox" name="toppings[]" value="mushrooms">Mushrooms<br />
 ```
+### Json
+How can we convert array into json to pass it in database. First we have to go to `Pizza model` in `app/Http/models/Pizza.php`. Then add this code into class `Pizza`:
+```php
+protected $casts = [
+    'toppings' => 'array'
+];
+```
