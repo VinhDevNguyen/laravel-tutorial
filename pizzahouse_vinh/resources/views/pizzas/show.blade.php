@@ -8,10 +8,20 @@
 
     <p class="toppings">Extra toppings:</p>
     <ul>
-        @foreach($pizza -> toppings as $topping)
-        <li>{{ $topping }}</li>
-        @endforeach
+        @if($pizza -> toppings != NULL)
+            @foreach($pizza -> toppings as $topping)
+            <li>{{ $topping }}</li>
+            @endforeach
+        @else
+            None
+        @endif
     </ul>
+
+    <form action="/pizzas/{{ $pizza -> id }}" method="post">
+    @csrf
+    @method('DELETE')
+    <button>Complete order</button>
+    </form>
 </div>
 <a href="/pizzas/" class="back"><- Back to all pizzas</a>
 @endsection()

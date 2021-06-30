@@ -267,3 +267,16 @@ protected $casts = [
     'toppings' => 'array'
 ];
 ```
+## Lesson 22: Removing Records
+We have to create a delete method
+```php
+Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy']);
+```
+Then in Controller, we have to find the `$id` and delete that
+```php
+public function destroy($id){
+    $pizzas = Pizza::findOrFail($id);
+    $pizzas -> delete();
+    return redirect('/pizzas');
+}
+```
